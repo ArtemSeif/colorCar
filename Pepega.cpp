@@ -84,10 +84,10 @@ int main()
         road(x, y);
         x=30;
         y=120;
-        paintblock(x, y, z, floors, flats);
+        paintblock(x, y, z, floors, flats);//paint home
         x=0;
         y=620;
-        paintcar (x,y,carColor);
+        paintcar (x,y,carColor);//paint car with choosen color
         Speed=0;
         for (i=1; 1==1; x +=Speed)
         {
@@ -154,7 +154,7 @@ int main()
             txTextOut (1047,782, "Stop");
             txTextOut (1047,810, "Program");
 
-            if (x>=1024+1*120)
+            if (x>=1024+1*120)//work with edges
             {
                 x=-120*(1+1);
             }
@@ -162,7 +162,7 @@ int main()
             {
                 x = 1024;
             }
-
+            
             txSleep(0);
             if (Speed >=5)
             {
@@ -172,11 +172,11 @@ int main()
             {
                 Speed=-3;
             }
-            if(GetAsyncKeyState('1'))
+            if(GetAsyncKeyState('1'))//stop
             {
                 Speed=0;
             }
-            if(GetAsyncKeyState(VK_ESCAPE))
+            if(GetAsyncKeyState(VK_ESCAPE))//stop program
             {
                 break;
                 return 0;
@@ -214,7 +214,7 @@ int main()
 
             txRectangle(1044, 120,1260,200);
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//start driving
             {
                 if (In (txMousePos(), areaRideRight))
                 {
@@ -225,7 +225,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)////driving left
             {
                 if (In (txMousePos(), areaRideLeft))
                 {
@@ -233,7 +233,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//driving up
             {
                 if (In (txMousePos(), areaRideUp))
                 {
@@ -241,7 +241,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//driving down
             {
                 if (In (txMousePos(), areaRideDown))
                 {
@@ -249,7 +249,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//start driving
             {
                 if (In (txMousePos(), areaStart))
                 {
@@ -262,7 +262,7 @@ int main()
 
 
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//orange mod
             {
                 if (In (txMousePos(), areaOrange))
                 {
@@ -270,7 +270,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//red mod
             {
                 if (In (txMousePos(), areaRed))
                 {
@@ -278,7 +278,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//purple mod
             {
                 if (In (txMousePos(), areaPurple))
                 {
@@ -286,7 +286,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//yellow mod
             {
                 if (In (txMousePos(), areaYellow))
                 {
@@ -294,7 +294,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//blue mod
             {
                 if (In (txMousePos(), areaBlue))
                 {
@@ -302,7 +302,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//party mod on
             {
                 if (In (txMousePos(), areaPartyOn))
                 {
@@ -310,7 +310,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//party mod off
             {
                 if (In (txMousePos(), areaPartyOff))
                 {
@@ -318,7 +318,7 @@ int main()
                 }
             }
 
-            if(txMouseButtons() & 1)
+            if(txMouseButtons() & 1)//stop prograam
             {
                 if (In (txMousePos(), areaStopProgram))
                 {
