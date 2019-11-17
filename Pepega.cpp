@@ -4,7 +4,8 @@
 
 int main()
 {
-    int x, y, i, z, a,siz,random, floors, flats, Speed, PartyMod,carColor, GO;
+    int x, y, i, z, a,siz,random, floors, flats, Speed, PartyMod,carColor;
+    bool GO;
     cout <<"Enter number of flats on floor (less than 8), after press ENTER: ";
     cin >> flats;
     cout <<"Enter number of floors (more than 1, less than 7), after press ENTER: ";
@@ -12,7 +13,7 @@ int main()
     //cout <<"Write number - 1 to start program (else program will not start), after press ENTER: ";
     //cin >>GO;
 
-    GO=1;
+    GO=true;
 
     if(flats >= 8) flats=7;
     if(flats <= 0) flats=1;
@@ -20,7 +21,7 @@ int main()
     if(floors >= 7) floors=6;
     if(floors <= 1) floors=2;
 
-    if(GO==1 & flats<8 & floors<7)
+    if(GO & flats<8 & floors<7)
     {
         txCreateWindow (1280,1010);
         txSetFillColor (TX_LIGHTBLUE);
